@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <!-- Normalize.css for better cross-browser consistency -->
@@ -14,12 +14,13 @@
 <body class="inside">
   <!-- Beginning header -->
   <header>
+    <a href="#restaurant-name" class="skip-link">Skip to main content</a>
     <!-- Beginning nav -->
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
+    <ul id="breadcrumb" aria-label='Breadcrumb'>
       <li><a href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
@@ -31,7 +32,7 @@
   <main id="maincontent">
 
     <!-- Beginning restaurant -->
-    <section id="restaurant-container">
+    <section id="restaurant-container" role="contentinfo" aria-label='Restaurant Information'>
       <h1 id="restaurant-name"></h1>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
@@ -41,8 +42,8 @@
         <label id="restaurant-address-label" class="restaurant-info-label">address</label>
 
       <!-- Beginning map -->
-      <section id="map-container">
-        <div id="map"></div>
+      <section id="map-container" role="application" aria-label="Mapbox Maps">
+        <div id="map" aria-labelledby="map-container"></div>
       </section>
       <!-- End map -->
 
@@ -56,7 +57,7 @@
 
 
     <!-- Beginning reviews -->
-    <section id="reviews-container">
+    <section id="reviews-container" role="contentinfo" aria-label='Restaurant Reviews'>
       <ul id="reviews-list"></ul>
     </section>
     <!-- End reviews -->
@@ -74,6 +75,8 @@
   <script type="text/javascript" src="js/dbhelper.js"></script>
   <!-- Main javascript file -->
   <script type="text/javascript" src="js/restaurant_info.js"></script>
+  <!-- Service Worker Registration -->
+  <script src="js/register-sw.js"></script>
   <!-- Google Maps -->
  <!--  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_tKbW6A5pQ-eupxI56myUnHLqYCzOjKo&libraries=places&callback=initMap"></script> -->
   <!-- End scripts -->

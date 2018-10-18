@@ -173,7 +173,7 @@ static imageSrcsetForRestaurant(restaurant) {
 static imageSizesForRestaurant(restaurant) {
   return `(max-width: 360px) 280px,
           (max-width: 600px) 600px,
-          800px`;
+          400px`;
 }
 
   /**

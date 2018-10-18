@@ -20,9 +20,17 @@ ul, li {
 	font-size: 10pt;
 	color: #333;
 }
-a {
-	color: orange;
-	text-decoration: none;
+.button {
+    background-color: #f18200;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 a:hover, a:focus {
 	color: #3397db;
@@ -298,4 +306,17 @@ nav h1 a {
 }
 .restaurant-info-label{
     display: none;
+}
+
+/* ====================== Skip Links ====================== */
+.skip-link {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: -1000px;
+    background-color: white;
+    padding: 5px 10px;
+}
+.skip-link:focus {
+    left: 15px;
 }
